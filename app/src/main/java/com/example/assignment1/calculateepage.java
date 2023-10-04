@@ -73,9 +73,9 @@ public class calculateepage extends AppCompatActivity {
         //convert the interest rate into a monthly percentage
         double monthlyInterestRate = (interestRate/12)/100;
         //Calculating the Monthly payments
-        double result = (principalAmount*(monthlyInterestRate*(Math.pow(1+monthlyInterestRate, paymentToBeMade))) )/((Math.pow(1+monthlyInterestRate, paymentToBeMade))-1) ;
+        double payment = (principalAmount*(monthlyInterestRate*(Math.pow(1+monthlyInterestRate, paymentToBeMade))) )/((Math.pow(1+monthlyInterestRate, paymentToBeMade))-1) ;
 
         DecimalFormat df = new DecimalFormat("#.##");
-        resultTextView.setText("Monthly Payment: $" + df.format(result));
+        resultTextView.setText("Monthly Payment: $" + df.format(payment));
     }
 }
