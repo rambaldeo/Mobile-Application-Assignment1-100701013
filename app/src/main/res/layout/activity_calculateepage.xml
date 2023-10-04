@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calculateepage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="Mortgage Calculator"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/principalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="100sp"
+        android:hint="Principal Amount"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/interestRate"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="200sp"
+        android:hint="Annual Interest Rate"
+        android:inputType="numberDecimal"
+        android:scrollbarSize="8dp"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/loanTermSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="300sp"
+        android:entries="@array/loan_terms"
+        android:scrollbarSize="8dp" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="150sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="400sp"
+        android:layout_gravity="center_horizontal"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="150sp"
+        android:text="Monthly Payment: "
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/toHome"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10sp"
+        android:text="Home"
+        app:icon="@android:drawable/arrow_down_float" />
+</FrameLayout>
