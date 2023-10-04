@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,7 +18,7 @@ public class calculateepage extends AppCompatActivity {
     private Spinner loanTermSpinner;
     private TextView resultTextView;
     private Button calculateButton;
-
+    private Button returnHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +37,6 @@ public class calculateepage extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         loanTermSpinner.setAdapter(adapter);
-        loanTermSpinner.setPrompt("Select Loan Term");
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +46,8 @@ public class calculateepage extends AppCompatActivity {
         });
 
 
-        Button b1 = findViewById(R.id.toHome);;
-        b1.setOnClickListener(
+        returnHome = findViewById(R.id.toHome);;
+        returnHome.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
